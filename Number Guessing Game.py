@@ -16,6 +16,7 @@ def check_answer(guess, answer, turns):
         print(f"Correct answer! The answer is {answer}")
 
 def set_difficulty():
+    """Returns a variable tied to an integer as predefined above based on the user specified difficulty"""
     level = input("Choose a difficulty. Type easy or 'hard: ")
     if level == "easy":
         return EASY_TURNS
@@ -23,6 +24,7 @@ def set_difficulty():
         return HARD_TURNS
 
 def start_game():
+    """Function for the while loop to keep user guessing, to call check_answer() function here to decide on outcome of guess"""
     print("Welcome to the number guessing game!")
     print("I'm thinking of a number between 1 and 100.")
     answer = random.randint(1, 100)
